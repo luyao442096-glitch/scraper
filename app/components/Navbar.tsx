@@ -55,11 +55,11 @@ export default function Navbar() {
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Logo 区 */}
+        {/* Logo 区 - 🚀 品牌已全面升级为 AIScraperPro */}
         <Link href="/" className="flex items-center gap-2">
           <span className="text-2xl">🐙</span>
           <span className="font-extrabold text-xl tracking-tight text-blue-600">
-            Nexus<span className="text-gray-900">Scraper</span>
+            AI<span className="text-gray-900">ScraperPro</span>
           </span>
         </Link>
 

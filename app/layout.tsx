@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 // 这是全局的 SEO 元数据（默认显示）
 export const metadata: Metadata = {
-  title: "AI Scraper | No-Code Web Data Extraction",
+  title: "AIScraperPro | No-Code Web Data Extraction",
   description: "Extract structured JSON data from any website using AI. No coding or regular expressions required.",
 };
 
@@ -37,7 +37,7 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
             <div>
               <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                🐙 NexusScraper
+                🐙 AIScraperPro
               </h3>
               <p className="text-gray-500">The easiest way to turn websites into structured data.</p>
             </div>
@@ -46,31 +46,37 @@ export default function RootLayout({
             <div>
               <h4 className="font-bold text-gray-900 mb-4">Popular Tools</h4>
               <ul className="space-y-2 text-gray-500">
-                <li><Link href="/tools/scrape-amazon-products" className="hover:text-blue-600">Scrape Amazon</Link></li>
-                <li><Link href="/tools/scrape-shopify-stores" className="hover:text-blue-600">Scrape Shopify</Link></li>
-                <li><Link href="/tools/scrape-real-estate" className="hover:text-blue-600">Scrape Zillow</Link></li>
+                {/* 暂时用 # 占位，避免出现 404 错误 */}
+                <li><Link href="#" className="hover:text-blue-600">Scrape Amazon</Link></li>
+                <li><Link href="#" className="hover:text-blue-600">Scrape Shopify</Link></li>
+                <li><Link href="#" className="hover:text-blue-600">Scrape Zillow</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold text-gray-900 mb-4">Company</h4>
               <ul className="space-y-2 text-gray-500">
-                <li><Link href="#" className="hover:text-blue-600">About Us</Link></li>
                 <li><Link href="/pricing" className="hover:text-blue-600">Pricing</Link></li>
-                <li><Link href="#" className="hover:text-blue-600">Contact</Link></li>
+                {/* 🚀 核心：一键触发发送邮件到你的邮箱！(注意这里要用原生的 a 标签) */}
+                <li><a href="mailto:luyao442096@gmail.com" className="hover:text-blue-600">Contact Us</a></li>
+                <li className="pt-2">
+                  <span className="text-xs text-gray-400 block break-all">
+                    Email: luyao442096@gmail.com
+                  </span>
+                </li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold text-gray-900 mb-4">Legal</h4>
               <ul className="space-y-2 text-gray-500">
-                <li><Link href="#" className="hover:text-blue-600">Privacy Policy</Link></li>
-                <li><Link href="#" className="hover:text-blue-600">Terms of Service</Link></li>
+                <li><Link href="/privacy" className="hover:text-blue-600">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="hover:text-blue-600">Terms of Service</Link></li>
               </ul>
             </div>
           </div>
           <div className="max-w-6xl mx-auto px-4 mt-12 pt-8 border-t border-gray-100 text-center text-gray-400">
-            © {new Date().getFullYear()} NexusScraper Inc. All rights reserved.
+            © {new Date().getFullYear()} AIScraperPro Inc. All rights reserved.
           </div>
         </footer>
 

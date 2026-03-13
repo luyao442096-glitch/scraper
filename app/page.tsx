@@ -75,7 +75,29 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+{/* 🚀 第 4 部分：FAQ 常见问题 (极大提升 SEO 权重和转化率) */}
+      <section className="py-24 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-extrabold text-gray-900">Frequently Asked Questions</h2>
+            <p className="mt-4 text-lg text-gray-500">Everything you need to know about AIScraperPro.</p>
+          </div>
+          <div className="space-y-8">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Do I need to know how to code?</h3>
+              <p className="text-gray-600">Not at all. Our AI understands plain English. Just tell it what you want (e.g., "get all product prices and image URLs"), and it will generate the structured data for you.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">How do you handle captchas and anti-bot systems?</h3>
+              <p className="text-gray-600">We use advanced rotating residential proxies and browser fingerprinting technologies. Our system automatically solves captchas and bypasses common protections like Cloudflare or Datadome.</p>
+            </div>
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">What format can I export my data in?</h3>
+              <p className="text-gray-600">You can instantly view the extracted data in JSON format on your screen, and download it directly as a clean CSV file, which opens perfectly in Excel or Google Sheets.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
