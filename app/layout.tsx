@@ -47,9 +47,16 @@ export default function RootLayout({
               <h4 className="font-bold text-gray-900 mb-4">Popular Tools</h4>
               <ul className="space-y-2 text-gray-500">
                 {/* 暂时用 # 占位，避免出现 404 错误 */}
-                <li><Link href="#" className="hover:text-blue-600">Scrape Amazon</Link></li>
-                <li><Link href="#" className="hover:text-blue-600">Scrape Shopify</Link></li>
-                <li><Link href="#" className="hover:text-blue-600">Scrape Zillow</Link></li>
+              <div>
+              <h4 className="font-bold text-gray-900 mb-4">Popular Tools</h4>
+              <ul className="space-y-2 text-gray-500">
+                {/* 🚀 链接已激活！ */}
+                <li><Link href="/tools/scrape-amazon" className="hover:text-blue-600">Scrape Amazon</Link></li>
+                <li><Link href="/tools/scrape-shopify" className="hover:text-blue-600">Scrape Shopify</Link></li>
+                <li><Link href="/tools/scrape-zillow" className="hover:text-blue-600">Scrape Zillow</Link></li>
+              </ul>
+            </div>
+            
               </ul>
             </div>
 
