@@ -1,10 +1,16 @@
 import ScraperTool from "@/app/components/ScraperTool";
 import { Metadata } from "next";
 
+// 定义 Next.js 15 的异步参数类型
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
 // 🌟 核心 SEO 魔法：动态生成网页的 <title> 和 <meta description>
-// 这会让谷歌精准收录你的每一个长尾词页面！
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const title = params.slug
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  // 关键修复：必须 await params 才能拿到 slug
+  const resolvedParams = await params;
+  const title = resolvedParams.slug
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
@@ -16,8 +22,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 // 这是一个服务端组件，专门负责 SEO 和页面渲染
-export default function ToolPage({ params }: { params: { slug: string } }) {
-  const title = params.slug
+export default async function ToolPage({ params }: Props) {
+  // 关键修复：必须 await params 才能拿到 slug
+  const resolvedParams = await params;
+  const title = resolvedParams.slug
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
@@ -34,7 +42,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* 真正干活的客户端零件 */}
-      <div className="mt-[-60px] relative z-10 px-4"> {/* 让工具向上偏移，更有设计感 */}
+      <div className="mt-[-60px] relative z-10 px-4">
         <div className="max-w-4xl mx-auto">
           <ScraperTool />
         </div>
