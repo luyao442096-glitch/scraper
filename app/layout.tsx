@@ -23,6 +23,26 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} min-h-screen flex flex-col bg-gray-50 text-gray-900`}>
         
+        {/* 🌟 注入 Schema 结构化数据，让谷歌抓取软件富文本片段 (Rich Snippets) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "AIScraperPro",
+              "applicationCategory": "DeveloperApplication",
+              "operatingSystem": "Web Browser",
+              "description": "No-code AI web scraper. Extract JSON/CSV from any site instantly.",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            })
+          }}
+        />
+
         <Navbar />
 
         <main className="flex-grow">
